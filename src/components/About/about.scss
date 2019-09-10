@@ -1,0 +1,97 @@
+.about {
+    min-height: 100vh;
+    width: 100vw;
+
+    .aboutCardContainer {
+        background: $dark-bg;
+        width: 100%;
+        height: auto;
+
+        display: grid;
+        column-gap: 1rem;
+        row-gap: 2rem;
+        @include mediaXs {
+            padding: 1rem 2rem;
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "primary"
+                "card0"
+                "card1";
+        }
+        @include mediaSmMin {
+            padding: 2rem 4rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-areas:
+                "primary primary card0"
+                "card1 card2 card3";
+        }
+        @include mediaLgMin {
+            padding: 2rem 10%;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-areas:
+                "primary primary card0 card1"
+                "card2 card3 card4 card5";
+        }
+
+        .aboutCard {
+            color: getTextColor(getAdjustedColor($dark-bg, 20));
+            background: getAdjustedColor($dark-bg, 20);
+            border: 1px solid rgba(getAdjustedColor($dark-bg, 60), 0.5);
+            line-height: 1.35rem;
+            @include EaseOut;
+
+            text-align: center;
+
+            &:hover {
+                background: $dark-bg;
+
+                h3 {
+                    color: $highlight-text;
+                }
+                box-shadow: 0 0px 16px 0 rgba(getAdjustedColor($light-bg, 75), 0.75);
+            }
+
+            h3 {
+                @include EaseOut;
+            }
+
+            .aboutCardTitleBox {
+                width: 100%;
+                padding-top: 1rem;
+                height: 3rem;
+
+                i {
+                    margin-right: 0.5rem;
+                }
+            }
+            .aboutCardLine {
+                margin-left: 10%;
+                width: 80%;
+                height: 1px;
+                background: getTextColor(getAdjustedColor($dark-bg, 20));
+            }
+            .aboutCardContent {
+                margin-left: 10%;
+                width: 80%;
+                padding: 1rem 0;
+                color: getAdjustedColor(getTextColor(getAdjustedColor($dark-bg, 20)), 15);
+            }
+        }
+
+        .aboutCardPrimary {
+            grid-area: primary;
+
+            img {
+                width: 200px;
+                height: 200px;
+            }
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
+            .aboutCardContent {
+                padding: 0;
+            }
+        }
+    }
+}

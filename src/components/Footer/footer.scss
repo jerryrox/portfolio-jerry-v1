@@ -1,0 +1,17 @@
+.footer {
+    background: $darker-bg;
+    height: 4rem;
+
+    .footerNote {
+        margin: 0;
+        padding-top: 0.5rem;
+        @if(isLightBg($darker-bg)) {
+            color: lighten(getTextColor($darker-bg), 20);
+        }
+        @else {
+            color: darken(getTextColor($darker-bg), 20);
+        }
+        text-align: center;
+        line-height: 1.5rem;
+    }
+}

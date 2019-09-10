@@ -1,0 +1,172 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 3rem;
+    z-index: 2;
+    background: $light-bg;
+    padding: 0 1rem;
+
+    .menu {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        position: absolute;
+    }
+
+    .menuItem {
+        display: inline-block;
+        list-style: none;
+        text-decoration: none;
+        height: 100%;
+    }
+
+    .menuButton {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: $light-bg;
+        color: getTextColor($light-bg);
+        @include BorderlessButton;
+        @include EaseOut;
+
+        &:hover {
+            background: lighten($light-bg, 10);
+            @include EaseOut;
+        }
+    }
+
+    @include mediaXs {
+        .expandButton {
+            position: absolute;
+            top: 0;
+            left: 1rem;
+            width: 3rem;
+            padding: 14px 0 0 10px;
+    
+            .line {
+                width: 28px;
+                height: 3px;
+                margin: 0 0 5px 0;
+                background: getTextColor($light-bg);
+                @include EaseOut;
+            }
+
+            &.expanded {
+                .line {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(5px, 5px);
+                    }
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(7px, -6px);
+                    }
+                }
+            }
+        }
+        .expansionMenu {
+            z-index: -1;
+            position: absolute;
+            top: 100vh;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba($dark-bg, 0.85);
+            @include EaseOut;
+
+            &.expanded {
+                top: 3rem;
+            }
+
+            ul {
+                margin: 0;
+                padding: 25vh 0 0 0;
+
+                li {
+                    display: block;
+                    width: 100%;
+                    height: 2rem;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    text-align: center;
+                    margin-bottom: 1.5rem;
+
+                    a {
+                        width: 100%;
+                        color: getTextColor($dark-bg);
+                        text-decoration: none;
+                        @include EaseOut;
+
+                        &:hover {
+                            color: $highlight-text;
+                        }
+                    }
+                }
+            }
+        }
+        .leftMenu {
+            visibility: hidden;
+        }
+    }
+    @include mediaSmMin {
+        .expandButton {
+            visibility: hidden;
+        }
+        .expansionMenu {
+            visibility: hidden;
+        }
+        .leftMenu {
+            top: 0;
+            left: 1rem;
+            
+            button {
+                width: 6.5rem;
+                height: 100%;
+            }
+        }
+    }
+
+    .rightMenu {
+        top: 0;
+        right: 1rem;
+        
+        button {
+            width: 3.4rem;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+/*
+        const Container = styled.div`
+            position: fixed;
+            width: 100%;
+            height: 3rem;
+            padding: 1rem;
+            z-index: 2;
+            background: ${theme.brightBg};
+            color: ${theme.textColor};
+        `;
+
+        const MenuContainer = styled.ul`
+            display: flex;
+        `;
+        const MenuItem = styled.li`
+
+        `;
+        const MenuButton = styled.button`
+            display: inline-block;
+
+
+        `;
+        const Menu = styled.h4`
+            font-weight: 400;
+            color: ${theme.textColor}
+        `;
+*/

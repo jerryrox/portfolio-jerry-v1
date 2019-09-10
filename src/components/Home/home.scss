@@ -1,0 +1,69 @@
+.home {
+    overflow: hidden;
+
+    .homeImg {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: right;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            background: rgba($dark-bg, 0.85);
+        }
+    }
+
+    .info {
+        position: absolute;
+        top: 35vh;
+        left: 6rem;
+        height: auto;
+    }
+
+    h1 {
+        display: block;
+        color: $highlight-text;
+        font-size: 4rem;
+        font-weight: 500;
+        height: 6rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    h3 {
+        display: block;
+        height: 2rem;
+        margin: 0;
+        padding: 0 0 0 1rem;
+
+        &.brief {
+            color: getTextColor($dark-bg);
+        }
+
+        &.welcome {
+            color: getTextColor($dark-bg);
+        }
+    }
+
+    @include mediaXs {
+        .info {
+            left: 0;
+            width: 100vw;
+        }
+        h1 {
+            width: 100vw;
+            text-align: center;
+        }
+        h3 {
+            width: 100vw;
+            padding: 0 10vw;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@mixin EaseOut {
+    transition: all 0.25s ease-out;
+}
+
+@mixin Button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+@mixin BorderlessButton {
+    @include Button;
+    border: none;
+}

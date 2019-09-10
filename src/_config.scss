@@ -1,0 +1,83 @@
+$light-bg: #444;
+$dark-bg: #282828;
+$darker-bg: #141414;
+
+$highlight-text: #eece1a;
+
+@function isLightBg($bg) {
+    @return lightness($bg) > 40;
+}
+
+@function getTextColor($bg) {
+    @if(isLightBg($bg)) {
+        @return #000;
+    }
+    @return #fff;
+}
+
+@function getAdjustedColor($color, $amount) {
+    @if(isLightBg($color)) {
+        @return darken($color, $amount);
+    }
+    @return lighten($color, $amount);
+}
+
+@mixin mediaXs {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+@mixin mediaSm {
+    @media screen and (min-width: 601px) and (max-width: 960px) {
+        @content;
+    }
+}
+@mixin mediaSmMin {
+    @media screen and (min-width: 601px) {
+        @content;
+    }
+}
+@mixin mediaSmMax {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (min-width: 961px) and (max-width: 1280px) {
+        @content;
+    }
+}
+@mixin mediaMdMin {
+    @media screen and (min-width: 961px) {
+        @content;
+    }
+}
+@mixin mediaMdMax {
+    @media screen and (max-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 1281px) and (max-width: 1920px) {
+        @content;
+    }
+}
+@mixin mediaLgMin {
+    @media screen and (min-width: 1281px) {
+        @content;
+    }
+}
+@mixin mediaLgMax {
+    @media screen and (max-width: 1920px) {
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1921px) {
+        @content;
+    }
+}
