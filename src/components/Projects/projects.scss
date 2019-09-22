@@ -1,0 +1,108 @@
+.projects {
+    width: 100vw;
+
+    .projectsContainer {
+        background: $dark-bg;
+        box-sizing: border-box;
+        width: 100%;
+        height: auto;
+        
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include mediaXs {
+            padding: 1rem 1rem;
+        }
+        @include mediaSmMin {
+            padding: 2rem 2rem;
+        }
+        @include mediaLgMin {
+            padding: 2rem 10%;
+        }
+
+        .projectCard {
+            margin: 1rem;
+            border-radius: 0.6rem;
+            color: getTextColor($dark-bg);
+            background: getAdjustedColor($dark-bg, 20);
+            border: 1px solid $darker-bg;
+            box-shadow: 0 0 0.25rem rgba(getAdjustedColor(getTextColor($dark-bg), 20), 0.2);
+            width: 26rem;
+            min-height: 10rem;
+            @include EaseOut;
+
+            &:hover {
+                box-shadow: 0 0 1rem rgba(getAdjustedColor(getTextColor($dark-bg), 20), 1);
+                @include EaseOut;
+            }
+
+            .cardThumbBox {
+                position: relative;
+                background: #fff;
+                background-size: cover;
+                background-position: center;
+                box-shadow: 0 0.25 0.25rem rgba($dark-bg, 0.8);
+                border-radius: 0.6rem 0.6rem 0 0;
+                width: 100%;
+                height: 100px;
+
+                h2 {
+                    position: absolute;
+                    bottom: 0.5rem;
+                    right: 1rem;
+                    text-shadow: 0.1rem 0.1rem 0.25rem rgba(0, 0, 0, 0.5);
+                    text-transform: uppercase;
+                    font-size: 1.1rem;
+                    font-style: italic;
+                    text-align: right;
+                }
+
+                p {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    margin: 0;
+                    color: #000;
+                    width: 100%;
+                    text-align: center;
+                }
+                .cardLinks {
+                    margin: 0;
+                    padding: 0;
+
+                    .cardLinkItem {
+                        display: inline-block;
+                        padding: 0.5rem;
+                        list-style: none;
+
+                        a {
+                            color: #fff;
+                            text-shadow: 0rem 0rem 0.5rem rgba(0, 0, 0, 0.75); 
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $highlight-text;
+                                @include EaseOut;
+                            }
+                        }
+                    }
+                }
+            }
+            .cardTitle {
+                box-sizing: borderbox;
+                margin: 0.7rem 0 0.5rem 0;
+                padding-left: 1rem;
+                width: 100%;
+            }
+            .cardDesc {
+                box-sizing: borderbox;
+                margin: 0 0 0.6rem 0;
+                padding: 0 2rem;
+                width: 100%;
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

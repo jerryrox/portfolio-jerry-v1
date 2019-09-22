@@ -1,2 +1,48 @@
 .contact {
+    width: 100vw;
+
+    .contactContainer {
+        background: $dark-bg;
+        width: 100%;
+        height: auto;
+        padding-bottom: 2rem;
+
+        .contactItem {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0 10%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .contactTitle {
+            padding-top: 2rem;
+            font-size: 1.5rem;
+            color: getTextColor($dark-bg);
+        }
+
+        .contactSubtitle {
+            color: getAdjustedColor(getTextColor($dark-bg), 25);
+            padding-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: $highlight-text;
+        }
+
+        .contactThickLine {
+            height: 1px;
+            margin: 1.5rem 10%;
+            width: 80%;
+            background: getTextColor($dark-bg);
+        }
+
+        .contactThinLine {
+            height: 1px;
+            margin: 1rem 25%;
+            width: 50%;
+            background: getAdjustedColor(getTextColor($dark-bg), 60);
+        }
+    }
 }

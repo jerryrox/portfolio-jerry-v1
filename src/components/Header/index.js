@@ -62,6 +62,11 @@ export default class Header extends React.Component {
                             <button className="menuButton"><i className="fa fa-github-square fa-2x"></i></button>
                         </a>
                     </li>
+                    <li className="menuItem">
+                        <a href="https://jerryroxdev.blogspot.com" target="_blank" rel="noopener noreferrer">
+                            <button className="menuButton"><i className="fa fa-book fa-2x"></i></button>
+                        </a>
+                    </li>
                 </ul>
             </div>
         );
