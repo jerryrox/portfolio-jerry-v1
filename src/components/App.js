@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter, Route } from "react-router-dom";
+import { HashRouter, Route } from "react-router-dom";
 
 import Home from "./Home";
 import Header from "./Header";
@@ -12,7 +12,7 @@ import Contact from "./Contact";
 export default class App extends React.Component {
   render() {
     return(
-      <BrowserRouter>
+      <HashRouter basename="/">
         <div>
           <Header/>
 
@@ -21,7 +21,7 @@ export default class App extends React.Component {
           <Route path="/projects" component={Projects}/>
           <Route path="/contact" component={Contact}/>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
