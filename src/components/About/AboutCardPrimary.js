@@ -9,7 +9,7 @@ export default class AboutCardPrimary extends React.Component {
                 <img src={profile} alt=""/>
                 <h3>Jerry Kim</h3>
                 <p className="aboutCardContent">
-                    I am a passionate programmer who like to develop new games and tools while overcoming new challenges.
+                    I am a passionate programmer who likes to develop new games and tools while overcoming new challenges.
                 </p>
             </div>
         );

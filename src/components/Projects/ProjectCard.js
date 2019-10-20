@@ -71,7 +71,7 @@ export default class ProjectCard extends React.Component {
                         status && <h2>{status}</h2>
                     }
                     {
-                        !thumb && <p>Thumbnail not available</p>
+                        !thumb && <p>No thumbnail</p>
                     }
                 </div>
 

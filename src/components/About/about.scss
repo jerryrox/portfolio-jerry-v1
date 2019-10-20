@@ -15,7 +15,10 @@
             grid-template-areas:
                 "primary"
                 "card0"
-                "card1";
+                "card1"
+                "card2"
+                "card3"
+                "card4";
         }
         @include mediaSmMin {
             padding: 2rem 4rem;
@@ -68,6 +71,10 @@
                 width: 80%;
                 height: 1px;
                 background: getTextColor(getAdjustedColor($dark-bg, 20));
+            }
+            .aboutCardSubtitle {
+                
+                font-weight: bold;
             }
             .aboutCardContent {
                 margin-left: 10%;
