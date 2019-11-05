@@ -16,7 +16,7 @@ export default class About extends React.Component {
                         C# / Java / Objective-C / Javascript / C / C++ / Solidity<br/>
                     </AboutCard>
                     <AboutCard index={1} icon="fa fa-code" title="Libraries & Frameworks">
-                        React / React Native (Expo) / Ethereum (web3) / Bitcoin core / Omnicore / SDL2 / FMOD / and many more...<br/>
+                        React / React Native (Expo) / Ethereum (web3) / TRON / Bitcoin core / Omnicore / SDL2 / FMOD / and many more...<br/>
                     </AboutCard>
                     <AboutCard index={2} icon="fa fa-code" title="Tools">
                         Unity / Visual Studio / XCode / Adobe Animate / Netbeans / Eclipse / VS Code

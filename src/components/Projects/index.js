@@ -52,6 +52,14 @@ export default class Projects extends React.Component {
         super();
 
         this.projects.push(new ProjectInfo(
+            require("../../assets/img/elementals.jpg"),
+            "Elementals: Infinity Defense",
+            "A tower defense game developed for Game Programming assignment 2.",
+            new LinkInfo({
+                blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-elementals-infinity-defense.html"
+            })
+        ));
+        this.projects.push(new ProjectInfo(
             require("../../assets/img/duobeats.jpg"),
             "DuoBeats",
             "A vertical-scrolling rhythm game developed for Game Programming assignment 1.",
@@ -79,7 +87,7 @@ export default class Projects extends React.Component {
         this.projects.push(new ProjectInfo(
             require("../../assets/img/ebs.jpg"),
             "EBS 고등 수학 게임 (EBS high school math games)",
-            "A collection of HTML5-based games hosted in EBS, which aims to teach high-school-level mathematical theories through games.",
+            "A collection of HTML5-based games hosted in EBS, which aims to teach high-school-level mathematical concepts through games.",
             new LinkInfo({
                 blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-ebs-math-games.html"
             })
@@ -87,7 +95,7 @@ export default class Projects extends React.Component {
         this.projects.push(new ProjectInfo(
             require("../../assets/img/ebs.jpg"),
             "EBS 중등 수학 게임 (EBS middle school math games)",
-            "A collection of HTML5-based games hosted in EBS, which aims to teach middle-school-level mathematical theories through games.",
+            "A collection of HTML5-based games hosted in EBS, which aims to teach middle-school-level mathematical concepts through games.",
             new LinkInfo({
                 blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-ebs-math-games.html"
             })
@@ -106,7 +114,7 @@ export default class Projects extends React.Component {
             "Project: Card",
             "A personal project with aspects of a card collection game, RPG, and some actions.",
             new LinkInfo({
-                blogger: ""
+                blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-project-card.html"
             }),
         ));
         this.projects.push(new ProjectInfo(
