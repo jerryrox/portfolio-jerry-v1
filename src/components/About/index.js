@@ -13,21 +13,27 @@ export default class About extends React.Component {
                 <div className="aboutCardContainer">
                     <AboutCardPrimary/>
                     <AboutCard index={0} icon="fa fa-code" title="Languages">
-                        C# / Java / Objective-C / Javascript / C / C++ / Solidity<br/>
+                        C# / Java / Objective-C / Typescript / Javascript / C++ / Solidity<br/>
                     </AboutCard>
-                    <AboutCard index={1} icon="fa fa-code" title="Libraries & Frameworks">
-                        React / React Native (Expo) / Ethereum (web3) / TRON / Bitcoin core / Omnicore / SDL2 / FMOD / and many more...<br/>
+                    <AboutCard index={1} icon="fa fa-code" title="Tools & Libs & Frameworks">
+                        NodeJS / Git & Gitflow / ExpressJS / Postman / ReactJS / Expo / Flutter / CreateJS / SDL2 / MongoDB / Mongoose / OpenGL<br/>
                     </AboutCard>
-                    <AboutCard index={2} icon="fa fa-code" title="Tools">
-                        Unity / Visual Studio / XCode / Adobe Animate / Netbeans / Eclipse / VS Code
+                    <AboutCard index={2} icon="fa fa-code" title="Services">
+                        TravisCI / AWS / Heroku<br/>
                     </AboutCard>
-                    <AboutCard index={3} icon="fa fa-music" title="Hobbies">
+                    <AboutCard index={3} icon="fa fa-code" title="Blockchain">
+                        Web3 / Infura / Tronweb / Truffle / Ganache / Metamask<br/>
+                    </AboutCard>
+                    <AboutCard index={4} icon="fa fa-code" title="Testing">
+                        NUnit / JUnit / Mocha & Chai / Jest / Enzyme<br/>
+                    </AboutCard>
+                    <AboutCard index={5} icon="fa fa-code" title="IDEs / Engines">
+                        Unity / Netbeans / Eclipse / XCode / VSCode / Visual Studio / Adobe Animate<br/>
+                    </AboutCard>
+                    <AboutCard index={6} icon="fa fa-music" title="Hobbies">
                         Listening to music<br/>
-                        Playing rhythm games (osu!)<br/>
-                        Playing MOBA games (League of Legends)<br/>
-                        Playing collection games (Girls' Frontline)<br/>
                         Developing my own games<br/>
-                        Reading comics & light novels<br/>
+                        Reading comics & watching Dragon Ball<br/>
                         Meeting up with friends
                     </AboutCard>
                 </div>
