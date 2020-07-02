@@ -52,6 +52,15 @@ export default class Projects extends React.Component {
         super();
 
         this.projects.push(new ProjectInfo(
+            require("../../assets/img/projectbeats.jpg"),
+            "Project: Beats",
+            "A personal project which aims to develop a large-scale rhythm game using Unity game engine.",
+            new LinkInfo({
+                blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-project-beats.html"
+            }),
+            StatusTypes.development
+        ));
+        this.projects.push(new ProjectInfo(
             require("../../assets/img/elementals.jpg"),
             "Elementals: Infinity Defense",
             "A tower defense game developed for Game Programming assignment 2.",
@@ -99,15 +108,6 @@ export default class Projects extends React.Component {
             new LinkInfo({
                 blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-ebs-math-games.html"
             })
-        ));
-        this.projects.push(new ProjectInfo(
-            require("../../assets/img/projectbeats.jpg"),
-            "Project: Beats",
-            "A personal project which aims to develop a large-scale rhythm game using Unity game engine.",
-            new LinkInfo({
-                blogger: "https://jerryroxdev.blogspot.com/2019/10/portfolio-project-beats.html"
-            }),
-            StatusTypes.development
         ));
         this.projects.push(new ProjectInfo(
             require("../../assets/img/projectcard.jpg"),
